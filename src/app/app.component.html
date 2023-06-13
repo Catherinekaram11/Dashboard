@@ -1,0 +1,99 @@
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav class="sidenav" mode=side opened=true>
+   <h2>Coligo </h2>
+    <mat-nav-list>
+      <mat-list-item >
+        <mat-icon>home</mat-icon> 
+        <span>Dashboard</span>
+      </mat-list-item>
+
+      <mat-list-item>
+    
+          <mat-icon>calendar_today</mat-icon>
+          Schedule
+      
+      </mat-list-item>
+      
+      <mat-list-item>
+        <mat-icon>library_books</mat-icon> 
+        Courses
+      </mat-list-item>
+
+      <mat-list-item>
+        <mat-icon>collections_bookmark</mat-icon>
+        GradeBook
+      </mat-list-item>
+  
+      <mat-list-item>
+        <mat-icon>timeline</mat-icon> 
+       Performance
+      </mat-list-item>
+
+      <mat-list-item>
+        <mat-icon>announcement</mat-icon>
+        Announcement
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    
+    
+  <mat-toolbar>
+   
+    <mat-toolbar-row>
+      <div style="font-family: initial;
+      font-weight: bold;
+      font-size: xx-large;"> Welcome Talia,</div>
+    <!-- <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field> -->
+    </mat-toolbar-row> 
+  </mat-toolbar>
+  <div class="wrapper">
+    <mat-card class="rowOne">
+      <div style="grid-column: 1/2;">
+      <h1> EXAMS TIME</h1>
+      <div style=" font-family: auto;
+      font-size: medium  ;
+      color: rgb(87, 86, 86);
+      padding-left: 30px;"> Here we are, Are you ready to fight? Don't worry we prepared some tips<br> to be ready for your exams </div>
+      <h3 style="padding-left: 30px;
+      padding-top: 10px;
+      font-size: small;
+      color: grey;
+      font-style: italic;"> "Nothing happens until something moves" - Albert Einstein</h3>
+      <div style="padding-left: 30px;">
+      <button mat-button  style="background-color: rgb(61, 183, 183); padding: 20px; color:aliceblue; margin-bottom: 30px;">View exams tips</button>
+      </div>
+      </div>
+      <div style="grid-column: 2/3;">
+        <img src="https://th.bing.com/th/id/OIP.keMzA09VvgpmDgHb8pm16AAAAA?pid=ImgDet&rs=1" style= "height: 280px; margin-left: 200px;">   
+       </div>
+    
+    </mat-card>
+    <mat-card class="rowTwo">
+      <h2 style=" font-family: auto;
+      font-size: larger  ; font-weight: 800;
+      color: rgb(87, 86, 86);
+      padding-left: 30px; padding-bottom: 5px; margin-bottom: 5px;"> Announcements </h2>
+      <h3 style =" font-family: auto;
+      font-size: medium  ;
+      color: rgb(87, 86, 86);
+      padding-left: 30px; padding-top: 5px;"> We educate warriors! keep updated !</h3>
+    </mat-card>
+    <mat-card class="rowTwo_2">
+      <tbody>
+        <tr *ngFor="let quiz of quizzes">
+          <td>{{ quiz.title }}</td>
+          <td>{{ quiz.topic }}</td>
+          
+        </tr>
+      </tbody>
+    </mat-card>
+  </div>
+    <!-- Main content -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
